@@ -1,4 +1,4 @@
-package com.richardliu.jesmvp.module.login;
+package com.richardliu.jesmvp.module.login.contract;
 
 
 import com.richardliu.jesmvp.base.presenter.IBasePresenter;

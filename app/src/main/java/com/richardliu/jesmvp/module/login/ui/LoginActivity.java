@@ -8,7 +8,7 @@ import com.richardliu.jesmvp.MainActivity;
 import com.richardliu.jesmvp.R;
 import com.richardliu.jesmvp.base.view.BaseActivity;
 import com.richardliu.jesmvp.model.SPFHelper;
-import com.richardliu.jesmvp.module.login.LoginContract;
+import com.richardliu.jesmvp.module.login.contract.LoginContract;
 import com.richardliu.jesmvp.module.login.presenter.LoginPresenter;
 
 import butterknife.BindView;
