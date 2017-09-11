@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeProgressBar">
+        <attr name="swipepb_inner_radius" format="dimension" />
+        <attr name="swipepb_background_color" format="color" />
+        <attr name="swipepb_progress_color" format="color" />
+        <attr name="swipepb_progress_stoke_width" format="dimension" />
+        <attr name="swipepb_show_arrow" format="boolean" />
+        <attr name="swipepb_enable_circle_background" format="boolean" />
+        <attr name="swipepb_arrow_width" format="dimension" />
+        <attr name="swipepb_arrow_height" format="dimension" />
+        <attr name="swipepb_progress" format="integer" />
+        <attr name="swipepb_max" format="integer" />
+        <attr name="swipepb_progress_text_size" format="dimension" />
+        <attr name="swipepb_progress_text_color" format="color" />
+        <attr name="swipepb_progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

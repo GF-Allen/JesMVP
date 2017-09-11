@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="@drawable/shape_round_white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.chinajesit.clue.widget.loadmore.SwipeProgressBar
+        android:id="@+id/SwipeProgressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+</LinearLayout>
