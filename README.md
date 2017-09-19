@@ -12,12 +12,13 @@
       ├─bean //实体类
       ├─constants //常量
       ├─model //对model层的基础封装
+      │  ├─cache //缓存封装
       │  ├─netapi //统一的API接口管理
       │  ├─retrofit //retrofit封装类
       │  └─subscribe //subscribe封装类
       ├─module //业务层
       │  └─login 
-	  │		 ├─contract //契约类 用于统一管理View和Presenter的接口
+	  │      ├─contract //契约类 用于统一管理View和Presenter的接口
       │      ├─model //具体业务的model层
       │      ├─presenter //presenter层
       │      └─ui //View层
@@ -53,8 +54,13 @@
 -  constraint_layout    : "1.0.2"
 -  permissionsdispatcher: "2.3.2"
 -  hellocharts          : "v1.5.8"
+-  hawk                 : "2.0.1"
 
 ### TODO ###
 
 - 组件化：借助AS中的Module，项目中已经开始，找机会整理后提交
 - 路由：支撑组件化后各业务Module的跳转以及参数控制
+
+### 2017-9-18 ###
+
+- 利用Hawk做数据缓存（Key-value）

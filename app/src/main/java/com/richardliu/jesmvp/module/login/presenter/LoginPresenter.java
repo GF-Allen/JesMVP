@@ -2,15 +2,16 @@ package com.richardliu.jesmvp.module.login.presenter;
 
 import android.text.TextUtils;
 
-import com.richardliu.jesmvp.base.bean.JesResponse;
 import com.richardliu.jesmvp.base.presenter.BasePresenter;
 import com.richardliu.jesmvp.bean.User;
 import com.richardliu.jesmvp.model.AppBaseCache;
 import com.richardliu.jesmvp.model.JesException;
 import com.richardliu.jesmvp.model.SPFHelper;
+import com.richardliu.jesmvp.model.cache.RetrofitCache;
 import com.richardliu.jesmvp.model.subscribe.JesSubscribe;
 import com.richardliu.jesmvp.module.login.contract.LoginContract;
 import com.richardliu.jesmvp.module.login.model.LoginModel;
+import com.socks.library.KLog;
 
 import rx.Subscription;
 
@@ -35,8 +36,8 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
         Subscription mSubscribe = mModel.login(userName, password)
                 .subscribe(new JesSubscribe<User>(mView) {
                     @Override
-                    public void _onSuccess(JesResponse<User> result) {
-                        AppBaseCache.getInstance().setUser(result.getResult());
+                    public void _onSuccess(User result) {
+                        AppBaseCache.getInstance().setUser(result);
                         SPFHelper spfHelper = new SPFHelper(mView.getContext(), "");
                         spfHelper.putString("loginName", userName);
                         mView.loginSuccess();
@@ -66,5 +67,15 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
             return false;
         }
         return true;
+    }
+
+    private void testCache() {
+        mSubscriptions.add(RetrofitCache.load("test", mModel.login("aaaa", "bbbb"), true, true)
+                .subscribe(new JesSubscribe<User>(mView) {
+                    @Override
+                    public void _onSuccess(User response) {
+                        KLog.d(response);
+                    }
+                }));
     }
 }

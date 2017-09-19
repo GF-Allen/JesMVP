@@ -88,5 +88,7 @@ dependencies {
     releaseCompile "com.squareup.leakcanary:leakcanary-android-no-op:${libs.leakcanary}"
     testCompile "com.squareup.leakcanary:leakcanary-android-no-op:${libs.leakcanary}"
 
+    compile "com.orhanobut:hawk:${libs.hawk}"
+
     testCompile 'junit:junit:4.12'
 }

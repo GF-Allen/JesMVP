@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import com.richardliu.jesmvp.MainActivity;
 import com.richardliu.jesmvp.R;
 import com.richardliu.jesmvp.base.view.BaseActivity;
 import com.richardliu.jesmvp.model.SPFHelper;
@@ -35,8 +34,8 @@ public class LoginActivity extends BaseActivity implements LoginContract.View {
     @Override
     public void loginSuccess() {
         showToastMessage("登录成功");
-        startActivityNoValue(this, MainActivity.class);
-        finish();
+//        startActivityNoValue(this, MainActivity.class);
+//        finish();
     }
 
     @Override
